@@ -14,8 +14,8 @@ from langchain_core.prompts import PromptTemplate
 
 load_dotenv()
 
-model="llama3-70b-8192"
-apikey= "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"
+model=st.secrets["model"]
+apikey= st.secrets["apikey"]
 
 llm = ChatGroq(temperature=0.8,
              model_name=model,
